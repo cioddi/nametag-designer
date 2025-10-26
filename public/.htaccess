@@ -1,0 +1,16 @@
+#<If "req('Host') != 'www.localhost:8500'">
+#AuthType Basic
+#AuthName "Authenticate"
+#AuthUserFile /var/www/vhosts/lvps92-51-164-165.dedicated.hosteurope.de/httpdocs/.htpasswd
+#Require valid-user
+#</If>
+
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_URI} !^api/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule . /index.html [L]
+
