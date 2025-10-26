@@ -188,7 +188,7 @@ const Designer = props => {
           <a
             target="_blank"
             href="https://hackaday.com/2020/02/22/3d-printable-nameplates-from-your-web-browser/">
-            <img width="200" src="/images/hackaday_logo.png" />
+            <img width="200" src="/nametag-designer/images/hackaday_logo.png" />
           </a>
           <br />
           <br />

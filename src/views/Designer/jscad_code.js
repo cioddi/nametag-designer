@@ -415,7 +415,7 @@ let getJscadIncludes = config => {
     );
     i++;
   }
-  return [window.location.origin + '/assets/opentype.min.jscad?v=2', ...fonts];
+  return [window.location.origin + '/nametag-designer/assets/opentype.min.jscad?v=2', ...fonts];
 };
 
 let getCode = () => {

@@ -37,7 +37,7 @@ const RoutesComponent = () => {
       />
       */}
         <Route
-          path="/"
+          path="/nametag-designer/"
           element={
             <>
               <MainLayout>
