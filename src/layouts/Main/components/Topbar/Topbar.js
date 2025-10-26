@@ -58,7 +58,7 @@ const Topbar = props => {
               xs={2}
               style={{ paddingTop: 0, display: 'flex', alignItems: 'center' }}>
               <img
-                src="/assets/logo.svg"
+                src="/nametag-designer/assets/logo.svg"
                 style={{ color: '#fff' }}
                 width="35"
               />

@@ -409,7 +409,7 @@ let getJscadIncludes = config => {
   while (typeof config['textblock_font_' + i] !== 'undefined') {
     fonts.push(
       window.location.origin +
-        '/assets/fonts/' +
+        '/nametag-designer/assets/fonts/' +
         config['textblock_font_' + i].font +
         '_ttf.jscad'
     );

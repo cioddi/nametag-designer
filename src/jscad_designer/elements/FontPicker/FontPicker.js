@@ -108,7 +108,7 @@ const FontPicker = props => {
         }}
         onClick={() => selectFont(fonts_shown[index].name, index)}>
         <img
-          src={'/assets/font_previews/' + fonts_shown[index].name + '.png'}
+          src={'/nametag-designer/assets/font_previews/' + fonts_shown[index].name + '.png'}
           style={{
             height: '25px'
           }}
@@ -188,7 +188,7 @@ const FontPicker = props => {
               renderValue: selected => {
                 return (
                   <img
-                    src={'/assets/font_previews/' + selected + '.png'}
+                    src={'/nametag-designer/assets/font_previews/' + selected + '.png'}
                     style={{
                       height: '25px'
                     }}
