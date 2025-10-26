@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/nametag-designer/static/css/main.cc3f8129.css",
-    "main.js": "/nametag-designer/static/js/main.df71f3f1.js",
+    "main.js": "/nametag-designer/static/js/main.28ff5537.js",
     "index.html": "/nametag-designer/index.html",
     "main.cc3f8129.css.map": "/nametag-designer/static/css/main.cc3f8129.css.map",
-    "main.df71f3f1.js.map": "/nametag-designer/static/js/main.df71f3f1.js.map"
+    "main.28ff5537.js.map": "/nametag-designer/static/js/main.28ff5537.js.map"
   },
   "entrypoints": [
     "static/css/main.cc3f8129.css",
-    "static/js/main.df71f3f1.js"
+    "static/js/main.28ff5537.js"
   ]
 }
