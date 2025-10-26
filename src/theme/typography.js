@@ -87,11 +87,10 @@ export default {
     textTransform: 'uppercase'
   },
   logotext: {
-    color: palette.text.primary,
     fontWeight: 200,
     fontSize: '12px',
     letterSpacing: '-0.06px',
     lineHeight: '24px',
-		color: '#ff0000',
-  },
+    color: '#ff0000'
+  }
 };

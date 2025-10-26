@@ -535,7 +535,6 @@ let getCode = () => {
       case 'none':
       default:
         return csgText;
-        break;
     }
 
     // neue Möglichkeit finden hide funktion wieder einzubauen
