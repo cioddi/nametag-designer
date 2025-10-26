@@ -6,6 +6,7 @@ import { JscadContext } from '../../jscad_designer/components/JscadContext';
 import { getCode, getJscadIncludes, param_def } from './jscad_code.js';
 
 import { Grid, Button, Typography } from '@material-ui/core';
+import CheckoutDialogValueForValue from '../../jscad_designer/components/CheckoutDialogValueForValue';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -67,6 +68,22 @@ const Designer = props => {
       .substring(script.indexOf('{') + 1);
   };
 
+  const getStlAsString = cb => {
+    processor.clearOutputFile();
+    var blob = processor.currentObjectsToBlob();
+    var extension = processor.selectedFormatInfo().extension;
+
+    const reader = new FileReader();
+
+    reader.addEventListener('loadend', e => {
+      const data = e.srcElement.result;
+
+      cb(data);
+    });
+
+    reader.readAsText(blob);
+  };
+
   const update = useCallback(() => {
     if (processor && typeof getParams().textblock_font_0 !== 'undefined') {
       processor.abort();
@@ -89,7 +106,7 @@ const Designer = props => {
             onClick={() => {
               setLoading(true);
               setTimeout(() => {
-                setState({ ...state, checkout_form_open: true });
+                setState(state => ({ ...state, checkout_form_open: true }));
               }, 100);
             }}
             style={{ width: '100%' }}
@@ -100,17 +117,6 @@ const Designer = props => {
               component="p"
               style={{ marginRight: '5px' }}>
               Download STL file
-            </Typography>
-            <Typography
-              variant="h3"
-              component="p"
-              style={{
-                display: 'none',
-                fontSize: '15px',
-                marginRight: '5px',
-                color: '#449721'
-              }}>
-              $2.50
             </Typography>
           </Button>
           <br />
@@ -225,6 +231,17 @@ const Designer = props => {
           </ul>
         </Grid>
       </Grid>
+      {state.checkout_form_open && (
+        <CheckoutDialogValueForValue
+          getStlAsString={getStlAsString}
+          closeDialog={() => {
+            setState({ ...state, checkout_form_open: false });
+          }}
+          onUploadReady={() => {
+            setLoading(false);
+          }}
+        />
+      )}
     </div>
   );
 };
